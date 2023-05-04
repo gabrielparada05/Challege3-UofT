@@ -24,6 +24,6 @@ function pickOne() {
 generateBtn.addEventListener("click", function writePassword()
 {
     var passwordText = document.querySelector("#password");
-    var password = pickOne (9);
+    var password = pickOne ();
     passwordText.value = password;
 }   )
