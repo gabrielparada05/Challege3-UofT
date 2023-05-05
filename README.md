@@ -10,7 +10,7 @@ This app has built dynamically updated HTML and CSS powered by JavaScript code t
 
 
 ## Getting started
-To access the website, simply type in the website address into your web browser xxxxxxxxxxxxxxxxxx. Once the website loads, you will be presented with the homepage. From there, you can navigate to the website and create your password.
+To access the website, simply type in the website address into your web browser (https://gabrielparada05.github.io/Password-generator-C3-UofT/). Once the website loads, you will be presented with the homepage. From there, you can navigate to the website and create your password.
 
 A screenshot is available inside the assets folder.
 ![alt text](./Assets/screenshot.jpg)
@@ -28,7 +28,7 @@ Please refer to the License in the repo.
 
 ## How to Contribute
 
-You can contribute to this Guide through https://github.com/gabrielparada05/challenge3-UofT.
+You can contribute to this Guide through (https://github.com/gabrielparada05/Password-generator-C3-UofT)
 
 
 Thank you for visiting my website and supporting my learning journey. 
