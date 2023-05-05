@@ -1,35 +1,63 @@
-*,
-*::before,
-*::after {
+/* Set box-sizing for all elements */
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
-html,
-body,
-.wrapper {
+/* Set height and remove margin and padding for html, body, and .wrapper */
+html, body, .wrapper {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
+/* Set font family and background color for body */
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
 
+/* Set padding for .wrapper */
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
+/* Set padding for divs inside .card */
+.card div {
+  padding: 10px;
+}
+
+/* Set padding for choices_character class */
+.choices_character {
+  padding-left: 10px;
+}
+
+/* Set styles for header */
 header {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   padding-top: 0px;
   color: hsl(206, 17%, 28%);
 }
 
+/* Remove default spinner for number input */
+input[type=number]::-webkit-inner-spin-button {
+  opacity: 1;
+}
+
+/* Set styles for password length label */
+.password-length {
+  text-align: center;
+}
+
+/* Set styles for h2 */
+h2 {
+  padding: 0;
+  text-align: center;
+}
+
+/* Set styles for body */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -39,7 +67,47 @@ header {
   font-size: 18px;
   margin: 0 auto;
   max-width: 800px;
-  padding: 30px 40px;
+  padding: 10px 20px;
+  text-align: ;
+}
+
+
+.values {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: max-content;
+}
+
+.values label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-right: 10px;
+}
+
+.values input[type="number"] {
+  width: 50px;
+  height: 30px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+
+.values input[type="number"]:focus {
+  outline: black;
+  border-color: #2196F3;
+}
+
+.values .multiple_selector {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card-header::after {
@@ -50,13 +118,16 @@ header {
   height: 2px;
 }
 
+
 .card-body {
   min-height: 100px;
 }
 
+
 .card-footer {
   text-align: center;
 }
+
 
 .card-footer::before {
   content: " ";
@@ -72,12 +143,14 @@ header {
   clear: both;
 }
 
+
+
+/* Set styles for button */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
   color: hsl(0, 0%, 100%);
   display: inline-block;
   font-size: 22px;
@@ -88,15 +161,18 @@ header {
   cursor: pointer;
 }
 
+/* Set styles for disabled button */
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
 }
 
+/* Set float to right */
 .float-right {
   float: right;
 }
 
+/* Set styles for password input */
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -118,7 +194,21 @@ button[disabled] {
   overflow: hidden;
 }
 
-@media (max-width: 690px) {
+/* Set styles for multiple_selector class on small screens */
+@media screen and (max-width: 820px) {
+  .multiple_selector {
+    flex-direction: initial;
+  }
+
+  .multiple_selector [type=checkbox] {
+    vertical-align: middle;
+    position: relative;
+    bottom: 1px;
+  }
+}
+
+/* Set styles for media query */
+@media screen and (max-width: 690px) {
   .btn {
     font-size: 1rem;
     margin: 16px 0px 0px 0px;
@@ -130,8 +220,49 @@ button[disabled] {
   }
 }
 
-@media (max-width: 500px) {
+.choices_character {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+.choices_character label {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 700px) {
   .btn {
     font-size: 0.8rem;
   }
+  label {
+    display: inline-block;
+
+  }
+  .values div {
+    flex-direction: column;
+  }
+  
+  .multiple_selector {
+    display: inline;
+  }
+.card div {
+  text-align: center;
 }
+
+@media only screen and (max-width: 480px) {
+  .choices_character {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+  }
+  .choices_character label {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+
+

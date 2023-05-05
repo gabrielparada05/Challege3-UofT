@@ -14,6 +14,7 @@ var size =  document.getElementById("p-length").value;
 var count = 0;
 
 
+
 //Checking values from users
 function pickOne() {
   var characters = "";
@@ -43,11 +44,28 @@ function pickOne() {
   return password;
 };
 
+// Get the checkboxes and the button
+var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+var button = document.querySelector('button');
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", function writePassword()
-{
+// Add event listener to button
+button.addEventListener('click', function() {
+  // Check if at least one checkbox is checked
+  var checked = false;
+  checkboxes.forEach(function(checkbox) {
+    if (checkbox.checked) {
+      checked = true;
+    }
+  });
+
+  // If no checkbox is checked, generate a message
+  if (!checked) {
+    alert('Please select at least one checkbox.');
+  } else {
+    // If at least one checkbox is checked, generate the password
+    var password = pickOne();
     var passwordText = document.querySelector("#password");
-    var password = pickOne ();
     passwordText.value = password;
-}   )
+  }
+});
+
